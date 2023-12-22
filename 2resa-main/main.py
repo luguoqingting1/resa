@@ -16,7 +16,7 @@ from utils.config import Config
 from runner.runner import Runner 
 from datasets import build_dataloader
 
-'''
+
 def main():
     args = parse_args()
     os.environ["CUDA_VISIBLE_DEVICES"] = ','.join(str(gpu) for gpu in args.gpus)
@@ -68,9 +68,10 @@ def parse_args():
     args = parser.parse_args()
 
     return args
+
+
+
 '''
-
-
 def main():
     # 直接指定参数值
     args = parse_args(
@@ -134,7 +135,7 @@ def parse_args(gpus=None, load_from=None, config=None):
         args.config = config
 
     return args
-
+'''
 
 if __name__ == '__main__':
     main()
