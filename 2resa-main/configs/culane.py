@@ -61,7 +61,7 @@ img_height = 288
 img_width = 800
 cut_height = 240 
 
-dataset_path = '/root/autodl-tmp/CUlane'
+dataset_path = '/kaggle/input/culane/CULane'
 dataset = dict(
     train=dict(
         type='CULane',
