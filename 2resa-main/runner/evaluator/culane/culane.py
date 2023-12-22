@@ -17,7 +17,7 @@ def check():
     import sys
     FNULL = open(os.devnull, 'w')
     result = subprocess.call(
-        './runner/evaluator/culane/lane_evaluation/evaluate', stdout=FNULL, stderr=FNULL)
+        '/kaggle/working/resa/2resa-main/runner/evaluator/culane/lane_evaluation/evaluate', stdout=FNULL, stderr=FNULL)
     if result > 1:
         print('There is something wrong with evaluate tool, please compile it.')
         sys.exit()
@@ -33,7 +33,7 @@ def read_helper(path):
     return res
 
 
-def call_culane_eval(data_dir, output_path='./output'):
+def call_culane_eval(data_dir, output_path='/kaggle/working/resa/2resa-main/output'):
     if data_dir[-1] != '/':
         data_dir = data_dir + '/'
     detect_dir = os.path.join(output_path, 'lines') + '/'
@@ -64,7 +64,7 @@ def call_culane_eval(data_dir, output_path='./output'):
     out7 = os.path.join(output_path, 'txt', 'out7_cross.txt')
     out8 = os.path.join(output_path, 'txt', 'out8_night.txt')
 
-    eval_cmd = './runner/evaluator/culane/lane_evaluation/evaluate'
+    eval_cmd = '/kaggle/working/resa/2resa-main/runner/evaluator/culane/lane_evaluation/evaluate'
 
     os.system('%s -a %s -d %s -i %s -l %s -w %s -t %s -c %s -r %s -f %s -o %s' % (
     eval_cmd, data_dir, detect_dir, data_dir, list0, w_lane, iou, im_w, im_h, frame, out0))
